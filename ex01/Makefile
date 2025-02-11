@@ -19,9 +19,9 @@ $(NAME) : $(OBJ)
 			$(CC) $(CFLAGS) -o $(NAME) -g3 $(OBJ)
 
 clean :
-			$(RM) $(OBJ)
+            $(RM) $(OBJ)
 
 fclean : clean
-			$(RM) $(NAME) $(OBJ)
+            $(RM) $(NAME) $(OBJ)
 
 re : fclean all
