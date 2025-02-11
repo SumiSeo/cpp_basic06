@@ -13,7 +13,14 @@ static void printSpecialValues(const std::string& value)
         std::cout << "float: nanf" << std::endl;
         std::cout << "double: nan" << std::endl;
     } 
-    else if (value == "inf" || value == "-inf" || value == "+inf") 
+    else if (value == "inf" || value == "+inf") 
+    {
+        std::cout << "char: impossible" << std::endl;
+        std::cout << "int: impossible" << std::endl;
+        std::cout << "float: " << "inf" << "f" << std::endl;
+        std::cout << "double: " << "inf" << std::endl;
+    }
+     else if (value == "-inf") 
     {
         std::cout << "char: impossible" << std::endl;
         std::cout << "int: impossible" << std::endl;
@@ -125,7 +132,7 @@ void ScalarConverter::convert(std::string &s)
     }
     else if(s == "inf" || s == "-inf" || s =="+inf")
     {
-        printSpecialValues("inf");
+        printSpecialValues(s);
         return;
     }
 
